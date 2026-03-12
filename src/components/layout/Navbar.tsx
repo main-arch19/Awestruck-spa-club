@@ -51,10 +51,10 @@ export default function Navbar() {
           'fixed left-0 right-0 z-40 transition-all duration-300',
           'top-0',
           isScrolled
-            ? 'glass shadow-lg'
+            ? 'bg-white'
             : isHomePage
             ? 'bg-transparent'
-            : 'glass',
+            : 'bg-white',
           menuOpen && 'bg-transparent backdrop-filter-none border-0 shadow-none'
         )}
         style={{ top: isScrolled || !isHomePage ? 0 : 36 }}
