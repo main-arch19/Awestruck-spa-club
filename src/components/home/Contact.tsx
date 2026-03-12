@@ -25,15 +25,15 @@ export default function Contact() {
     setSubmitted(true);
   };
 
-  const inputClass = 'w-full h-12 px-4 rounded-md bg-grey-dark border border-grey-dark focus:border-primary/60 focus:outline-none text-white placeholder-grey-med font-body text-base transition-colors duration-200';
+  const inputClass = 'w-full h-12 px-4 rounded-md bg-cream border border-sand focus:border-primary/60 focus:outline-none text-brand-black placeholder-grey-med font-body text-base transition-colors duration-200';
   const labelClass = 'block font-body text-xs uppercase tracking-wider text-grey-med mb-1.5';
 
   return (
-    <section id="contact" className="section-wrapper bg-brand-black">
+    <section id="contact" className="section-wrapper bg-white">
       <div className="max-w-content mx-auto">
         <AnimateOnScroll animation="fade-up" className="text-center mb-12 md:mb-16">
           <p className="font-accent italic text-primary text-lg mb-3">Get in Touch</p>
-          <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-white">Contact Us</h2>
+          <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-brand-black">Contact Us</h2>
           <p className="font-body text-grey-med max-w-xl mx-auto mt-4 leading-relaxed">
             Questions? Special requests? We'd love to hear from you.
           </p>
@@ -54,7 +54,7 @@ export default function Contact() {
                     <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h3 className="font-heading font-semibold text-2xl text-white mb-3">Message Sent!</h3>
+                <h3 className="font-heading font-semibold text-2xl text-brand-black mb-3">Message Sent!</h3>
                 <p className="font-body text-grey-med leading-relaxed">
                   Thank you for reaching out. A member of our team will get back to you within 24 hours.
                 </p>
@@ -193,7 +193,7 @@ export default function Contact() {
                 <div key={title} className="glass rounded-lg p-4 flex gap-3">
                   <div className="text-primary mt-0.5 shrink-0">{icon}</div>
                   <div>
-                    <p className="font-body font-semibold text-sm text-white mb-1">{title}</p>
+                    <p className="font-body font-semibold text-sm text-brand-black mb-1">{title}</p>
                     {lines.map((l) => <p key={l} className="font-body text-xs text-grey-med leading-relaxed">{l}</p>)}
                   </div>
                 </div>
@@ -201,13 +201,13 @@ export default function Contact() {
             </div>
 
             {/* Map placeholder */}
-            <div className="relative rounded-xl overflow-hidden bg-grey-dark border border-grey-dark h-52 flex items-center justify-center">
+            <div className="relative rounded-xl overflow-hidden bg-cream border border-sand h-52 flex items-center justify-center">
               <div className="text-center">
                 <svg className="w-10 h-10 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" strokeLinecap="round"/>
                   <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" strokeLinecap="round"/>
                 </svg>
-                <p className="font-body font-semibold text-white text-sm">123 Luxury Lane, Suite 200</p>
+                <p className="font-body font-semibold text-brand-black text-sm">123 Luxury Lane, Suite 200</p>
                 <p className="font-body text-grey-med text-xs mt-1">Beverly Hills, CA 90210</p>
                 <a
                   href="https://maps.google.com"

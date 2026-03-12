@@ -79,11 +79,11 @@ function PricingCard({ category, icon, items, index }: typeof PRICING[0] & { ind
 
   return (
     <AnimateOnScroll animation="fade-up" delay={index * 80} className="h-full">
-      <div className="glass rounded-xl h-full border border-white/5 hover:border-primary/20 transition-colors duration-300">
+      <div className="glass rounded-xl h-full border border-sand hover:border-primary/30 transition-colors duration-300">
         <div className="p-6">
           <div className="flex items-center gap-3 mb-6">
             <span className="text-primary text-xl">{icon}</span>
-            <h3 className="font-heading font-semibold text-xl text-white">{category}</h3>
+            <h3 className="font-heading font-semibold text-xl text-brand-black">{category}</h3>
           </div>
           <div className="space-y-1">
             {items.map((item) => (
@@ -93,7 +93,7 @@ function PricingCard({ category, icon, items, index }: typeof PRICING[0] & { ind
                   onClick={() => setOpenItem(openItem === item.name ? null : item.name)}
                   aria-expanded={openItem === item.name}
                 >
-                  <span className="font-body text-sm text-white group-hover:text-grey-light transition-colors">{item.name}</span>
+                  <span className="font-body text-sm text-brand-black group-hover:text-grey-dark transition-colors">{item.name}</span>
                   <div className="flex items-center gap-3 shrink-0">
                     <span className="font-body font-semibold text-primary text-sm">{item.price}</span>
                     <motion.span
@@ -117,7 +117,7 @@ function PricingCard({ category, icon, items, index }: typeof PRICING[0] & { ind
                       className="overflow-hidden"
                     >
                       <div className="px-3 pb-3">
-                        <div className="flex items-center gap-4 text-xs text-grey-med font-body bg-white/5 rounded-lg px-3 py-2">
+                        <div className="flex items-center gap-4 text-xs text-grey-med font-body bg-brand-black/5 rounded-lg px-3 py-2">
                           <span>⏱ {item.duration}</span>
                           <span>·</span>
                           <Link href="/booking" className="text-primary hover:underline">Book this service →</Link>
@@ -137,11 +137,11 @@ function PricingCard({ category, icon, items, index }: typeof PRICING[0] & { ind
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="section-wrapper bg-charcoal grain-overlay">
+    <section id="pricing" className="section-wrapper bg-white grain-overlay">
       <div className="max-w-content mx-auto">
         <AnimateOnScroll animation="fade-up" className="text-center mb-12 md:mb-16">
           <p className="font-accent italic text-primary text-lg mb-3">Investment in Yourself</p>
-          <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-white">
+          <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-brand-black">
             Pricing
           </h2>
           <p className="font-body text-grey-med max-w-2xl mx-auto mt-4 leading-relaxed">

@@ -21,7 +21,7 @@ export default function LoadingScreen({ onComplete }: Props) {
       {!curtainDone && (
         <motion.div
           key="loading"
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-brand-black"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-white"
           initial={{ scaleY: 1 }}
           exit={{
             scaleY: 0,

@@ -60,7 +60,7 @@ export default function About() {
   const yImg = useTransform(scrollYProgress, [0, 1], isMobile || reduced ? ['0%', '0%'] : ['-8%', '8%']);
 
   return (
-    <section id="about" ref={sectionRef} className="relative bg-charcoal overflow-hidden">
+    <section id="about" ref={sectionRef} className="relative bg-white overflow-hidden">
       <div className="section-wrapper max-w-content mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image — parallax on desktop */}
@@ -81,7 +81,7 @@ export default function About() {
             {/* Floating accent card */}
             <div className="absolute -bottom-6 -right-4 md:-right-8 glass rounded-lg px-5 py-4 shadow-lg">
               <p className="font-accent italic text-primary text-sm">Est. 2015</p>
-              <p className="font-heading font-bold text-white text-xl mt-0.5">Beverly Hills, CA</p>
+              <p className="font-heading font-bold text-brand-black text-xl mt-0.5">Beverly Hills, CA</p>
             </div>
           </AnimateOnScroll>
 
@@ -89,7 +89,7 @@ export default function About() {
           <div className="flex flex-col gap-8">
             <AnimateOnScroll animation="fade-up">
               <p className="font-accent italic text-primary text-lg">Our Story</p>
-              <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-white mt-2 leading-tight">
+              <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-brand-black mt-2 leading-tight">
                 A Decade of Transforming Lives Through the Art of Beauty
               </h2>
             </AnimateOnScroll>
@@ -107,8 +107,8 @@ export default function About() {
             <div className="grid grid-cols-2 gap-6">
               {STATS.map(({ value, suffix, label }, i) => (
                 <AnimateOnScroll key={label} animation="scale-up" delay={i * 100}>
-                  <div className="bg-grey-dark rounded-lg p-5 border border-grey-dark hover:border-primary/30 transition-colors duration-300">
-                    <p className="font-heading font-black text-3xl md:text-4xl text-white">
+                  <div className="bg-cream rounded-lg p-5 border border-sand hover:border-primary/30 transition-colors duration-300">
+                    <p className="font-heading font-black text-3xl md:text-4xl text-brand-black">
                       <AnimatedCounter value={value} suffix={suffix} />
                     </p>
                     <p className="font-body text-sm text-grey-med mt-1">{label}</p>

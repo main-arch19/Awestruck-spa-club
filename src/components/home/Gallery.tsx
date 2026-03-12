@@ -90,11 +90,11 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section id="gallery" className="section-wrapper bg-brand-black">
+    <section id="gallery" className="section-wrapper bg-cream">
       <div className="max-w-content mx-auto">
         <AnimateOnScroll animation="fade-up" className="text-center mb-10 md:mb-12">
           <p className="font-accent italic text-primary text-lg mb-3">Our Portfolio</p>
-          <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-white">Gallery</h2>
+          <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-brand-black">Gallery</h2>
           <p className="font-body text-grey-med max-w-xl mx-auto mt-4 leading-relaxed">
             A glimpse into the transformations that happen every day at Awestruck.
           </p>
@@ -110,7 +110,7 @@ export default function Gallery() {
                 'h-10 px-5 rounded-full font-body text-sm font-medium transition-all duration-200',
                 active === tab
                   ? 'bg-primary text-white shadow-glow'
-                  : 'bg-grey-dark text-grey-med hover:text-white hover:bg-grey-dark/80 border border-grey-dark'
+                  : 'bg-white text-grey-med hover:text-brand-black hover:bg-sand/60 border border-sand'
               )}
             >
               {tab}

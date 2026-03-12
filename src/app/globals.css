@@ -9,22 +9,26 @@
   --color-primary: #C41E3A;
   --color-primary-dark: #9B1B30;
   --color-primary-light: #E8354A;
-  --color-silver: #8A8A8A;
-  --color-black: #0A0A0A;
-  --color-charcoal: #1A1A1A;
-  --color-dark-grey: #2D2D2D;
-  --color-medium-grey: #6B6B6B;
-  --color-light-grey: #E8E8E8;
-  --color-off-white: #F5F5F5;
+  --color-primary-mist: #FEF2F4;
+  --color-silver: #8A817C;
+  --color-black: #1C1917;
+  --color-charcoal: #292524;
+  --color-dark-grey: #44403C;
+  --color-medium-grey: #78716C;
+  --color-warm-grey: #A8A29E;
+  --color-light-grey: #D6D3D1;
+  --color-sand: #E7E5E4;
+  --color-off-white: #F5F5F4;
+  --color-cream: #FAFAF9;
   --color-white: #FFFFFF;
 
-  /* Semantic tokens — default: DARK MODE */
-  --bg-primary: #0A0A0A;
-  --bg-secondary: #1A1A1A;
-  --bg-card: #2D2D2D;
-  --text-primary: #FFFFFF;
-  --text-secondary: #6B6B6B;
-  --border-color: #2D2D2D;
+  /* Semantic tokens — default: LIGHT MODE */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FAFAF9;
+  --bg-card: #FFFFFF;
+  --text-primary: #1C1917;
+  --text-secondary: #78716C;
+  --border-color: #E7E5E4;
   --accent: #C41E3A;
   --accent-hover: #9B1B30;
 
@@ -36,22 +40,25 @@
   --radius-md: 10px;
   --radius-lg: 16px;
 
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.12);
-  --shadow-md: 0 8px 24px rgba(0,0,0,0.2);
-  --shadow-lg: 0 16px 48px rgba(0,0,0,0.3);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.10);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.15);
   --shadow-glow: 0 0 24px rgba(196,30,58,0.3);
 
   --navbar-height: 72px;
 }
 
-/* ─── Light mode overrides ──────────────────────────────────────────── */
-.light {
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F5F5F5;
-  --bg-card: #FFFFFF;
-  --text-primary: #0A0A0A;
-  --text-secondary: #6B6B6B;
-  --border-color: #E8E8E8;
+/* ─── Dark mode overrides ───────────────────────────────────────────── */
+.dark {
+  --bg-primary: #1C1917;
+  --bg-secondary: #292524;
+  --bg-card: #44403C;
+  --text-primary: #FFFFFF;
+  --text-secondary: #78716C;
+  --border-color: #44403C;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.3);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.4);
 }
 
 /* ─── Base resets ───────────────────────────────────────────────────── */
@@ -62,7 +69,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  background-color: #0A0A0A;
+  background-color: #FFFFFF;
 }
 
 body {
@@ -90,15 +97,15 @@ body {
 
 /* ─── Glassmorphism ─────────────────────────────────────────────────── */
 .glass {
-  background: rgba(26, 26, 26, 0.6);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.light .glass {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+.dark .glass {
+  background: rgba(26, 26, 26, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ─── Gradient text ─────────────────────────────────────────────────── */
@@ -159,8 +166,8 @@ body {
 /* ─── Custom Scrollbar ──────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
-::-webkit-scrollbar-thumb { background: var(--color-dark-grey); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-medium-grey); }
+::-webkit-scrollbar-thumb { background: var(--color-sand); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-warm-grey); }
 
 /* ─── Custom cursor hide on mobile ──────────────────────────────────── */
 @media (pointer: coarse) {

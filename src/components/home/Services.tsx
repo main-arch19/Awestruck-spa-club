@@ -106,7 +106,7 @@ function ServiceCard({ service, index }: { service: typeof SERVICES[0]; index: n
       >
         <div className={cn('flip-card-inner h-full rounded-lg', flipped && 'flipped')}>
           {/* Front */}
-          <div className="flip-card-front rounded-lg overflow-hidden bg-grey-dark border border-grey-dark hover:border-primary/20 transition-colors duration-300">
+          <div className="flip-card-front rounded-lg overflow-hidden bg-white border border-sand hover:border-primary/20 transition-colors duration-300">
             <div className="relative h-44 overflow-hidden">
               <Image
                 src={service.image}
@@ -115,11 +115,11 @@ function ServiceCard({ service, index }: { service: typeof SERVICES[0]; index: n
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-grey-dark to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
             </div>
             <div className="p-6">
               <div className="text-primary mb-3">{service.icon}</div>
-              <h3 className="font-heading font-semibold text-h3-mobile md:text-h3 text-white leading-snug mb-2">
+              <h3 className="font-heading font-semibold text-h3-mobile md:text-h3 text-brand-black leading-snug mb-2">
                 {service.name}
               </h3>
               <p className="font-accent italic text-grey-med text-sm">{service.tagline}</p>
@@ -134,8 +134,8 @@ function ServiceCard({ service, index }: { service: typeof SERVICES[0]; index: n
           <div className="flip-card-back rounded-lg bg-primary/10 border border-primary/30 p-6 flex flex-col justify-between">
             <div>
               <div className="text-primary mb-3">{service.icon}</div>
-              <h3 className="font-heading font-semibold text-xl text-white mb-3">{service.name}</h3>
-              <p className="font-body text-grey-light text-sm leading-relaxed">{service.description}</p>
+              <h3 className="font-heading font-semibold text-xl text-brand-black mb-3">{service.name}</h3>
+              <p className="font-body text-grey-dark text-sm leading-relaxed">{service.description}</p>
             </div>
             <div className="mt-6">
               <p className="font-body text-primary font-semibold text-lg mb-4">{service.price}</p>
@@ -156,12 +156,12 @@ function ServiceCard({ service, index }: { service: typeof SERVICES[0]; index: n
 
 export default function Services() {
   return (
-    <section id="services" className="section-wrapper bg-brand-black">
+    <section id="services" className="section-wrapper bg-cream">
       <div className="max-w-content mx-auto">
         {/* Header */}
         <AnimateOnScroll animation="fade-up" className="text-center mb-12 md:mb-16">
           <p className="font-accent italic text-primary text-lg mb-3">What We Offer</p>
-          <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-white">
+          <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-brand-black">
             Our Signature Services
           </h2>
           <p className="font-body text-grey-med max-w-2xl mx-auto mt-4 leading-relaxed">

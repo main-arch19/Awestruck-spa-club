@@ -10,7 +10,7 @@ export default function TopInfoBar() {
     <AnimatePresence>
       {scrollDir === 'up' && (
         <motion.div
-          className="fixed top-0 left-0 right-0 z-50 bg-charcoal text-grey-med text-xs font-body h-9"
+          className="fixed top-0 left-0 right-0 z-50 bg-cream text-grey-med text-xs font-body h-9 border-b border-sand"
           initial={{ y: -36 }}
           animate={{ y: 0 }}
           exit={{ y: -36 }}
@@ -20,7 +20,7 @@ export default function TopInfoBar() {
             {/* Phone */}
             <a
               href="tel:+15551234567"
-              className="hover:text-white transition-colors duration-200 hidden sm:flex items-center gap-1.5 min-h-[36px]"
+              className="hover:text-brand-black transition-colors duration-200 hidden sm:flex items-center gap-1.5 min-h-[36px]"
             >
               <svg className="w-3 h-3 shrink-0" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
@@ -31,7 +31,7 @@ export default function TopInfoBar() {
             {/* Promo */}
             <p className="text-center flex-1 sm:flex-none">
               <span className="text-primary font-medium">20% Off</span> your first visit — use code{' '}
-              <span className="font-medium text-white">AWESTRUCK</span>
+              <span className="font-medium text-brand-black">AWESTRUCK</span>
             </p>
 
             {/* Socials */}
@@ -40,7 +40,7 @@ export default function TopInfoBar() {
                 href="https://instagram.com/AwestruckSpaClub"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors duration-200 min-h-[36px] flex items-center"
+                className="hover:text-brand-black transition-colors duration-200 min-h-[36px] flex items-center"
                 aria-label="Instagram"
               >
                 <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">

@@ -85,8 +85,8 @@ export default function Navbar() {
                       'font-body text-sm font-medium transition-colors duration-200 relative py-1',
                       'after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300',
                       isActive
-                        ? 'text-white after:w-full'
-                        : 'text-grey-med hover:text-white after:w-0 hover:after:w-full'
+                        ? 'text-brand-black after:w-full'
+                        : 'text-grey-med hover:text-brand-black after:w-0 hover:after:w-full'
                     )}
                   >
                     {label}
@@ -102,7 +102,7 @@ export default function Navbar() {
             {mounted && (
               <button
                 onClick={toggleTheme}
-                className="hidden md:flex items-center justify-center w-10 h-10 rounded-full hover:bg-grey-dark/50 transition-colors duration-200 text-grey-med hover:text-white"
+                className="hidden md:flex items-center justify-center w-10 h-10 rounded-full hover:bg-sand/50 transition-colors duration-200 text-grey-med hover:text-brand-black"
                 aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
               >
                 {theme === 'dark' ? (
@@ -128,26 +128,29 @@ export default function Navbar() {
             {/* Hamburger */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:hidden flex flex-col items-center justify-center w-11 h-11 gap-[5px] rounded-md hover:bg-grey-dark/40 transition-colors duration-200"
+              className="lg:hidden flex flex-col items-center justify-center w-11 h-11 gap-[5px] rounded-md hover:bg-sand/40 transition-colors duration-200"
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={menuOpen}
             >
               <span
                 className={cn(
-                  'block w-6 h-[2px] bg-white transition-all duration-300 origin-center',
-                  menuOpen && 'rotate-45 translate-y-[7px]'
+                  'block w-6 h-[2px] transition-all duration-300 origin-center',
+                  isScrolled || !isHomePage ? 'bg-brand-black' : 'bg-white',
+                  menuOpen && 'rotate-45 translate-y-[7px] bg-white'
                 )}
               />
               <span
                 className={cn(
-                  'block w-6 h-[2px] bg-white transition-all duration-300',
+                  'block w-6 h-[2px] transition-all duration-300',
+                  isScrolled || !isHomePage ? 'bg-brand-black' : 'bg-white',
                   menuOpen && 'opacity-0 scale-x-0'
                 )}
               />
               <span
                 className={cn(
-                  'block w-6 h-[2px] bg-white transition-all duration-300 origin-center',
-                  menuOpen && '-rotate-45 -translate-y-[7px]'
+                  'block w-6 h-[2px] transition-all duration-300 origin-center',
+                  isScrolled || !isHomePage ? 'bg-brand-black' : 'bg-white',
+                  menuOpen && '-rotate-45 -translate-y-[7px] bg-white'
                 )}
               />
             </button>
@@ -161,7 +164,7 @@ export default function Navbar() {
           <motion.div
             key="mobile-menu"
             className="lg:hidden fixed inset-0 z-30 flex flex-col"
-            style={{ background: 'rgba(10,10,10,0.97)', backdropFilter: 'blur(20px)' }}
+            style={{ background: 'rgba(250,250,249,0.97)', backdropFilter: 'blur(20px)' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -174,7 +177,7 @@ export default function Navbar() {
                     key={href}
                     href={href}
                     onClick={() => setMenuOpen(false)}
-                    className="font-heading text-3xl font-bold text-white hover:text-primary transition-colors duration-200 py-2 border-b border-grey-dark/40 last:border-0"
+                    className="font-heading text-3xl font-bold text-brand-black hover:text-primary transition-colors duration-200 py-2 border-b border-sand/60 last:border-0"
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.05 + i * 0.06, duration: 0.3 }}
@@ -200,7 +203,7 @@ export default function Navbar() {
                 {mounted && (
                   <button
                     onClick={toggleTheme}
-                    className="flex items-center justify-center gap-2 h-12 rounded-lg border border-grey-dark text-grey-med hover:text-white hover:border-grey-med transition-colors duration-200 font-body text-sm"
+                    className="flex items-center justify-center gap-2 h-12 rounded-lg border border-sand text-grey-med hover:text-brand-black hover:border-warm-grey transition-colors duration-200 font-body text-sm"
                   >
                     {theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode'}
                   </button>

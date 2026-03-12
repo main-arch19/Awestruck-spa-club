@@ -62,20 +62,20 @@ export default function Testimonials() {
     <section
       id="testimonials"
       className="relative section-wrapper overflow-hidden grain-overlay"
-      style={{ background: 'linear-gradient(135deg, #0A0A0A 0%, #1A0810 100%)' }}
+      style={{ background: 'linear-gradient(135deg, #FAFAF9 0%, #FEF2F4 100%)' }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
       {/* Background image */}
-      <div className="absolute inset-0 opacity-15">
+      <div className="absolute inset-0 opacity-8">
         <Image src="/images/gallery-17.jpg" alt="" fill className="object-cover" />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-white/50" />
       </div>
 
       <div className="relative z-10 max-w-content mx-auto">
         <AnimateOnScroll animation="fade-up" className="text-center mb-12 md:mb-16">
           <p className="font-accent italic text-primary text-lg mb-3">What Clients Say</p>
-          <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-white">
+          <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-brand-black">
             Stories of Transformation
           </h2>
         </AnimateOnScroll>
@@ -109,7 +109,7 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <blockquote className="font-accent italic text-xl md:text-2xl text-grey-light leading-relaxed mb-8">
+              <blockquote className="font-accent italic text-xl md:text-2xl text-grey-dark leading-relaxed mb-8">
                 "{TESTIMONIALS[idx].quote}"
               </blockquote>
 
@@ -123,7 +123,7 @@ export default function Testimonials() {
                   />
                 </div>
                 <div>
-                  <p className="font-heading font-semibold text-white">{TESTIMONIALS[idx].name}</p>
+                  <p className="font-heading font-semibold text-brand-black">{TESTIMONIALS[idx].name}</p>
                   <p className="font-body text-sm text-grey-med">{TESTIMONIALS[idx].role}</p>
                 </div>
               </div>
@@ -138,7 +138,7 @@ export default function Testimonials() {
               key={i}
               onClick={() => goTo(i)}
               className={`transition-all duration-300 rounded-full ${
-                i === idx ? 'w-6 h-2 bg-primary' : 'w-2 h-2 bg-grey-dark hover:bg-grey-med'
+                i === idx ? 'w-6 h-2 bg-primary' : 'w-2 h-2 bg-sand hover:bg-warm-grey'
               }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />

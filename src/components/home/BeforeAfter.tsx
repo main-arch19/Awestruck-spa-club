@@ -72,7 +72,7 @@ function ComparisonSlider({ beforeSrc, afterSrc, beforeLabel = 'Before', afterLa
 
   return (
     <div className="flex flex-col gap-4">
-      <h3 className="font-heading font-semibold text-h3-mobile md:text-h3 text-white text-center">{title}</h3>
+      <h3 className="font-heading font-semibold text-h3-mobile md:text-h3 text-brand-black text-center">{title}</h3>
       <div
         ref={containerRef}
         className="relative rounded-lg overflow-hidden select-none cursor-ew-resize"
@@ -172,11 +172,11 @@ const SLIDERS: SliderProps[] = [
 
 export default function BeforeAfter() {
   return (
-    <section id="before-after" className="section-wrapper bg-charcoal grain-overlay">
+    <section id="before-after" className="section-wrapper bg-cream grain-overlay">
       <div className="max-w-content mx-auto">
         <AnimateOnScroll animation="fade-up" className="text-center mb-12 md:mb-16">
           <p className="font-accent italic text-primary text-lg mb-3">See the Difference</p>
-          <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-white">
+          <h2 className="font-heading font-bold text-h2-mobile md:text-h2 text-brand-black">
             Real Transformations
           </h2>
           <p className="font-body text-grey-med max-w-xl mx-auto mt-4 leading-relaxed">
