@@ -39,7 +39,7 @@ export default function Hero() {
           style={{ animation: 'ken-burns 20s ease-in-out infinite' }}
         >
           <Image
-            src="/images/gallery-17.jpg"
+            src="/images/hero-bg.jpeg"
             alt="Awestruck Spa Club luxury spa interior"
             fill
             className="object-cover"
