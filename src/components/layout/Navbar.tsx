@@ -59,15 +59,15 @@ export default function Navbar() {
         )}
         style={{ top: isScrolled || !isHomePage ? 0 : 36 }}
       >
-        <div className="max-w-content mx-auto h-[72px] flex items-center justify-between px-5 md:px-8 lg:px-16">
+        <div className="max-w-content mx-auto h-[96px] flex items-center justify-between px-5 md:px-8 lg:px-16">
           {/* Logo */}
-          <Link href="/" className="relative flex-shrink-0 min-w-[120px] h-10" onClick={() => setMenuOpen(false)}>
+          <Link href="/" className="relative flex-shrink-0 min-w-[240px] h-20" onClick={() => setMenuOpen(false)}>
             <Image
               src="/images/logo.png"
               alt="Awestruck Spa Club"
-              width={140}
-              height={40}
-              className="object-contain object-left h-10 w-auto"
+              width={280}
+              height={80}
+              className="object-contain object-left h-20 w-auto"
               priority
             />
           </Link>
