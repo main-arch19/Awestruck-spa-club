@@ -48,10 +48,8 @@ export default function Hero() {
             quality={90}
           />
         </div>
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/60" />
-        {/* Gradient overlay — darker at bottom */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/70" />
+        {/* White overlay */}
+        <div className="absolute inset-0 bg-white/60" />
       </div>
 
       {/* Content */}
@@ -82,7 +80,7 @@ export default function Hero() {
                 key={i}
                 variants={reduced ? {} : wordVariant}
                 className={`inline-block mr-[0.25em] ${
-                  isArtistry || isRelaxation ? 'text-gradient' : 'text-white'
+                  isArtistry || isRelaxation ? 'text-gradient' : 'text-brand-black'
                 }`}
               >
                 {word}
@@ -93,7 +91,7 @@ export default function Hero() {
 
         {/* Sub-heading */}
         <motion.p
-          className="font-body text-grey-light text-base md:text-lg max-w-xl leading-relaxed mb-10"
+          className="font-body text-grey-med text-base md:text-lg max-w-xl leading-relaxed mb-10"
           initial={reduced ? {} : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.4 }}
@@ -116,7 +114,7 @@ export default function Hero() {
           </Link>
           <a
             href="#services"
-            className="flex items-center justify-center h-14 px-8 rounded-md border border-white/30 text-white font-body font-medium text-base hover:bg-white/10 transition-all duration-200 backdrop-blur-sm"
+            className="flex items-center justify-center h-14 px-8 rounded-md border border-brand-black/30 text-brand-black font-body font-medium text-base hover:bg-brand-black/10 transition-all duration-200"
           >
             Explore Services
           </a>
@@ -136,7 +134,7 @@ export default function Hero() {
             { val: '50+', label: 'Awards' },
           ].map(({ val, label }) => (
             <div key={label} className="text-center">
-              <p className="font-heading font-bold text-xl md:text-2xl text-white">{val}</p>
+              <p className="font-heading font-bold text-xl md:text-2xl text-brand-black">{val}</p>
               <p className="font-body text-xs text-grey-med uppercase tracking-widest mt-0.5">{label}</p>
             </div>
           ))}
@@ -146,7 +144,7 @@ export default function Hero() {
       {/* Scroll chevron */}
       <motion.a
         href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-white/50 hover:text-white transition-colors duration-200"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-brand-black/50 hover:text-brand-black transition-colors duration-200"
         animate={reduced ? {} : { y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         aria-label="Scroll to About"
