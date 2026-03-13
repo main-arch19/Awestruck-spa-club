@@ -56,7 +56,7 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col items-center text-center px-5 max-w-5xl mx-auto">
         {/* Eyebrow */}
         <motion.p
-          className="font-accent italic text-primary text-lg md:text-xl mb-6 tracking-wide"
+          className="font-accent italic text-primary text-lg md:text-xl mb-6 tracking-wide font-bold"
           initial={reduced ? {} : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -91,7 +91,7 @@ export default function Hero() {
 
         {/* Sub-heading */}
         <motion.p
-          className="font-body text-grey-med text-base md:text-lg max-w-xl leading-relaxed mb-10"
+          className="font-body text-grey-med text-base md:text-lg max-w-xl leading-relaxed mb-10 font-semibold"
           initial={reduced ? {} : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.4 }}
@@ -114,7 +114,7 @@ export default function Hero() {
           </Link>
           <a
             href="#services"
-            className="flex items-center justify-center h-14 px-8 rounded-md border border-brand-black/30 text-brand-black font-body font-medium text-base hover:bg-brand-black/10 transition-all duration-200"
+            className="flex items-center justify-center h-14 px-8 rounded-md bg-primary text-white font-body font-semibold text-base hover:bg-primary-dark transition-all duration-200 shadow-glow hover:shadow-glow-lg"
           >
             Explore Services
           </a>
